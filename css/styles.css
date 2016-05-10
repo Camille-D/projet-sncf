@@ -7,7 +7,7 @@
 	padding-left: 0px;
 }
 
-#menu li:first-child {
+#menu li:first-child, #menu li:nth-child(2) {
 	float: left;
 }
 
@@ -17,7 +17,7 @@
 
 #menu ul li {
 	display: inline-block;
-	margin: 10px 10px;
+	margin: 10px 15px;
 }
 
 #menu ul li ul{
@@ -29,8 +29,8 @@
 	padding-left: 0px;
 	margin-left: 0px;
 	position: absolute;
-	width:100px; 
-	height: auto;
+	width:120px; 
+	height: 100px;
 	top: 50px;
 	right: 95px;
 	text-align: left;
