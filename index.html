@@ -6,24 +6,50 @@
 	<title>Vitrine des innovations</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body ng-controller="myCtrl">
 	<nav id="menu">
 		<ul>
 			<li><a href="#">logo</a></li>
+			<li><input id='search' type="text" value="Recherche..."></li>
 			<li><a href="#">Startup's</a></li>
 			<li><a href="#">Produits</a></li>
 			<li><a href="#">connexion</a>
-				<ul>
-					<li>Professionnel</li>
-					<li>Particulier</li>
+				<ul id='essai'>
+					<li><a href="">Professionnel</a></li>
+					<li><a href="">Particulier</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 	<div id="containerProduits">
-		{{name}}
+		
 	</div>
+	<footer>
+		<ul>
+			<li>Société</li>
+			<li>Nous contacter</li>
+			<li>Règles</li>
+			<li>Conditions générales et confidentialité</li>
+		</ul>
+		<ul>
+			<li>Découvrir</li>
+			<li>Confiance et sécurité</li>
+			<li>Application mobile</li>
+			<li>Plan du site</li>
+		</ul>
+		<div id="reseauxSociaux">
+			<p>Rejoignez-nous sur</p>
+			<ul>
+				<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+				<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+				<li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+				<li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+				<li><i class="fa fa-pinterest" aria-hidden="true"></i></li>
+			</ul>
+		</div>
+	</footer>
 <script src="js/app.js"></script>
 <script src="js/controlScop.js"></script>		
 </body>

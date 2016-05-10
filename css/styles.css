@@ -15,11 +15,11 @@
 	margin: 10px 10px;
 }
 
-#menu ul li:last-child ul{
+#menu ul li ul{
 	display: none;
 }
 
-#menu ul li:last-child ul:hover {
+#menu ul li:hover ul {
 	display: block;
 	padding-left: 0px;
 	margin-left: 0px;
@@ -29,11 +29,10 @@
 	right: 0px;
 }
 
-
-/*#menu li:last-child ul li{
-	display: block;
-	float: none;
-}*/
+#search {
+	border-radius:20px;
+	padding-left: 10px; 
+}
 
 a {
 	list-style: none;
@@ -50,4 +49,38 @@ a:hover {
 #containerProduits {
 	width: 100%;
 	height: auto;
+}
+
+footer {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+footer ul {
+	display: inline-block;
+	list-style: none;
+	text-align: left;
+	padding: 30px;
+}
+
+#reseauxSociaux {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	padding-top: 40px;
+	border-top: 1px solid; 
+}
+
+#reseauxSociaux li {
+	display: inline-block;
+	margin: 10px;
+}
+
+#reseauxSociaux p {
+	font-weight: bold;
+}
+
+#reseauxSociaux i {
+	font-size: 30px;
 }
