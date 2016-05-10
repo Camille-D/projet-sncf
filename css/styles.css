@@ -31,7 +31,9 @@
 	position: absolute;
 	width:100px; 
 	height: auto;
-	right: 0px;
+	top: 50px;
+	right: 95px;
+	text-align: left;
 }
 
 #search {
@@ -39,16 +41,23 @@
 	padding-left: 10px; 
 }
 
-a {
+#menu a {
 	list-style: none;
 	color: white;
 	text-decoration: none;
 }
 
-a:hover {
+#menu a:hover {
 	list-style: none;
 	color: white;
 	text-decoration: none;
+	border-bottom: 2px solid white;
+	padding-bottom: 15px; 
+}
+
+i {
+	margin: 5px;
+	color: white;
 }
 
 #containerProduits {
@@ -74,12 +83,16 @@ footer li:first-child {
 	margin-bottom: 10px; 
 }
 
+footer a {
+	color: black;
+}
+
 #reseauxSociaux {
 	width: 80%;
 	text-align: center;
 	margin: auto;
 	padding-top: 40px;
-	border-top: 1px solid; 
+	border-top: 1px solid #008c9e; 
 }
 
 #reseauxSociaux li {
@@ -93,4 +106,5 @@ footer li:first-child {
 
 #reseauxSociaux i {
 	font-size: 30px;
+	color: #008c9e;
 }
