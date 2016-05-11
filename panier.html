@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="angular.js"></script>
+	<title>Votre panier</title>
+</head>
+
+<body ng-app="myApp"  ng-controller="myCtrl">
+	<a id="haut"></a>
+
+
+	<!-- NAV -->
+
+	<nav id="menu">
+		<ul>
+			<li><a href="#"><img src="image/vitrine.png" alt=""></a></li>
+			<li><i class="fa fa-search" aria-hidden="true"></i>
+			<input id='search' type="text" placeholder="Recherche..." ng-model="searchStartup"></li>
+			<li><a href="#">Startup's</a></li>
+			<li><a href="#">Produits</a></li>
+			<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
+				<ul id='essai'>
+					<li><a href="">Professionnel</a></li>
+					<li><a href="">Particulier</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+		</ul>
+	</nav>
+	<!-- NAV -->
+
+	<div id="boutons_validation">
+
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x cercle_valide " id="cercle_valide"></i>
+			<i class=" fa-stack-1x fa-inverse chiffre_valide">1</i>
+		</span>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class=" fa-stack-1x fa-inverse">2</i>
+		</span>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class=" fa-stack-1x fa-inverse">3</i>
+		</span>
+		<hr class="style1">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class=" fa-stack-1x fa-inverse">4</i>
+		</span>
+
+	</div>
+	<div id="panier_valid_livr_paie">
+		<p>Panier</p>
+		<p>Validation</p>
+		<p>Livraison</p>
+		<p>Paiement</p>
+	</div>
+
+
+<!-- tableau -->
+<div id="tableau_vente">
+	<table style="width:800px">
+	  <tr class="ligne_titre_commande">
+	    <th>Vendeur</th>
+	    <th>Article</th>
+	    <th>Disponibilité</th>
+			<th>Frais de livraison</th>
+	    <th>Quantité</th>
+	    <th>Prix total</th>
+	  </tr>
+	  <tr class="ligne_produit">
+	    <td ng-model="service">{{service.title}}</td>
+	    <td>Mimo</td>
+	    <td>En stock</td>
+			<td>13.99€</td>
+	    <td>1</td>
+	    <td>139.99€</td>
+	  </tr>
+		<tr class="ligne_produit">
+	    <td>{{service.title}}</td>
+	    <td>Feeltact</td>
+	    <td>Disponible le 12 Juin 2016</td>
+			<td>13.99€</td>
+	    <td>1</td>
+	    <td>999.99€</td>
+	  </tr>
+	</table>
+
+	<input type="button" value="Valider" id="button_submit">
+</div>
+
+
+
+
+<!-- tableau -->
+
+
+	<!-- FOOTER -->
+	<footer>
+		<ul>
+			<li><a href="">Société</a></li>
+			<li><a href="">Nous contacter</a></li>
+			<li><a href="">Règles</a></li>
+			<li><a href="">Conditions générales et confidentialité</a></li>
+		</ul>
+		<ul>
+			<li><a href="">Découvrir</a></li>
+			<li><a href="">Confiance et sécurité</a></li>
+			<li><a href="">Application mobile</a></li>
+			<li><a href="">Plan du site</a></li>
+		</ul>
+		<div id="reseauxSociaux">
+			<p>Rejoignez-nous sur</p>
+			<ul>
+				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- FOOTER -->
+
+
+	<!-- ANCRE -->
+	<a id="boutonAncre" href="#haut">
+		<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x"></i>
+		<i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+	</span></a>
+	<!-- ANCRE -->
+
+	<script src="app.js"></script>
+	<script src="controlScop.js"></script>
+</body>
+</html>
