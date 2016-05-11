@@ -1,84 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr" ng-app="myApp">
-<head>
-	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
-	<meta charset="UTF-8">
-	<title>Vitrine des innovations</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
-<body ng-controller="myCtrl">
-	<nav id="menu">
-		<ul>
-			<li><a href="#"><img src="image/vitrine.png" alt=""></a></li>
-			<li><a href="#"><h4>La vitrine des innovations</h4></a></li>
-			<li><i class="fa fa-search" aria-hidden="true"></i>
-<input id='search' type="text" placeholder="Recherche..."></li>
-			<li><a href="start-up.html">Startup's</a></li>
-			<li><a href="#">Produits</a></li>
-			<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
-				<ul>
-					<li><a href="">Professionnel</a></li>
-					<li><a href="">Particulier</a></li>
-				</ul>
-			</li>
-			<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
-		</ul>
-	</nav>
-	<div id="containerProduits">
-		<!-- //////////////////////// CODE C DEBUT //////////////////////// -->
-		<div class="container-titre-selection">
-			<h2 class="titre-selection text-center">Notre sélection du mois</h2>
-		</div>
+	<head>
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
+		<meta charset="UTF-8">
+		<title>Vitrine des innovations</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
 
-		<div class="container-cards-produits">
-			<div class="card-fav width-card-fav">
-				<div class="pic-produit-fav width-card-fav"></div>
-				<div class="btn-card-fav-produit width-card-fav position-elem ">
-					<input type="button" value="Ajouter au panier" class="btn-acheter-fav tx-white width-btn-fav">
+
+
+	<body ng-controller="myCtrl">
+		<a id="haut"></a>
+
+
+			<!-- NAV -->
+
+			<nav id="menu">
+				<ul>
+					<li><a href="#"><img src="image/vitrine.png" alt=""></a></li>
+					<li><a href="#"><h4>La vitrine des innovations</h4></a></li>
+					<li><i class="fa fa-search" aria-hidden="true"></i>
+		<input id='search' type="text" placeholder="Recherche..."></li>
+					<li><a href="start-up.html">Startup's</a></li>
+					<li><a href="#">Produits</a></li>
+					<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
+						<ul>
+							<li><a href="">Professionnel</a></li>
+							<li><a href="">Particulier</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+				</ul>
+			</nav>
+			<!-- NAV -->
+
+
+			<!-- MAIN CONTAINER -->
+
+			<!-- //////////////////////// CODE C DEBUT //////////////////////// -->
+			<div id="containerProduits">
+				<div class="container-titre-selection">
+					<h2 class="titre-selection text-center">Notre sélection du mois</h2>
 				</div>
-			</div>
-			<div class="card-fav width-card-fav">
-				<div class="pic-produit-fav width-card-fav"></div>
-				<div class="btn-card-fav-produit width-card-fav position-elem ">
-					<input type="button" value="Ajouter au panier" class="btn-acheter-fav tx-white width-btn-fav">
+
+				<div class="container-cards-produits-haut" >
+					<div class="card-fav width-card-fav" ng-repeat="service in services | filter: myFilter1">
+						<div class="dark-overlay width-card-fav position-elem"></div>
+						<div class="pic-produit-fav width-card-fav" ng-style="{'background' : 'url(' + service.imageFavori1 +') no-repeat center/cover'}"></div>
+						<div class="btn-card-fav-produit width-card-fav position-elem ">
+							<input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav">
+							<p class="nom-startup text-center tx-white">par {{ service.title }}</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="card-fav width-card-fav">
-				<div class="pic-produit-fav width-card-fav"></div>
-				<div class="btn-card-fav-produit width-card-fav position-elem ">
-					<input type="button" value="Ajouter au panier" class="btn-acheter-fav tx-white width-btn-fav">
+
+				<div class="container-cards-produits-bas">
+					<div class="card-fav width-card-fav" ng-repeat="service in services | filter: myFilter2">
+						<div class="dark-overlay width-card-fav position-elem"></div>
+						<div class="pic-produit-fav width-card-fav" ng-style="{'background' : 'url(' + service.imageFavori2 +') no-repeat center/cover'}"></div>
+						<div class="btn-card-fav-produit width-card-fav position-elem ">
+							<input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav">
+							<p class="nom-startup text-center tx-white">par {{ service.title }}</p>
+						</div>
+					</div>
 				</div>
+
 			</div>
-		</div>
-		<!-- //////////////////////// CODE C FIN //////////////////////// -->
-	</div>
-	<footer>
-		<ul>
-			<li><a href="">Société</a></li>
-			<li><a href="">Nous contacter</a></li>
-			<li><a href="">Règles</a></li>
-			<li><a href="">Conditions générales et confidentialité</a></li>
-		</ul>
-		<ul>
-			<li><a href="">Découvrir</a></li>
-			<li><a href="">Confiance et sécurité</a></li>
-			<li><a href="">Application mobile</a></li>
-			<li><a href="">Plan du site</a></li>
-		</ul>
-		<div id="reseauxSociaux">
-			<p>Rejoignez-nous sur</p>
-			<ul>
-				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-				<li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</footer>
-<script src="js/app.js"></script>
-<script src="js/controlScop.js"></script>
-</body>
+			<!-- //////////////////////// CODE C FIN //////////////////////// -->
+			<!-- MAIN CONTAINER -->
+
+
+			<!-- FOOTER -->
+
+			<footer>
+				<ul>
+					<li><a href="">Société</a></li>
+					<li><a href="">Nous contacter</a></li>
+					<li><a href="">Règles</a></li>
+					<li><a href="">Conditions générales et confidentialité</a></li>
+				</ul>
+				<ul>
+					<li><a href="">Découvrir</a></li>
+					<li><a href="">Confiance et sécurité</a></li>
+					<li><a href="">Application mobile</a></li>
+					<li><a href="">Plan du site</a></li>
+				</ul>
+				<div id="reseauxSociaux">
+					<p>Rejoignez-nous sur</p>
+					<ul>
+						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</footer>
+			<!-- FOOTER -->
+
+
+			<!-- ANCRE -->
+
+			<a id="boutonAncre" href="#haut">
+				<span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<!-- ANCRE -->
+
+
+		<script src="app.js"></script>
+		<script src="controlScop.js"></script>
+	</body>
 </html>

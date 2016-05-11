@@ -1,3 +1,4 @@
+/* DEBUT nav et footer */
 #menu ul {
 	width: 100%;
 	height: 50px;
@@ -104,7 +105,21 @@ footer a {
 	font-size: 30px;
 	color: #008c9e;
 }
+/* FIN nav et footer */
 
+
+
+
+/* DEBUT ancre */
+#boutonAncre {
+	position: fixed;
+  right:20px;
+  bottom:20px;
+}
+#boutonAncre .fa-circle {
+	color: #008C9E;
+}
+/* FIN ancre */
 
 
 
@@ -138,13 +153,22 @@ footer a {
 	margin: 50px 0 50px 0;
 }
 
-.container-cards-produits {
+.container-cards-produits-haut {
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 }
+
+.container-cards-produits-bas {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
 
 	/* Container de la Card */
 	.card-fav {
@@ -156,24 +180,34 @@ footer a {
 		opacity: 1;
 	}
 
+	.card-fav:hover .dark-overlay {
+		opacity: 1;
+	}
+
 	/* Image de la Card */
 	.pic-produit-fav {
 		height: 300px;
-		background: url("../image/codeybot-is-a-robot-that-helps-children-learn-coding.jpg") no-repeat;
-		background-position: 85% 0px;
-		-webkit-background-size: cover;
-		background-size: cover;
 	}
 
-	/* Div contenant le bouton "Ajouter au panier" */
+	/* Div contenant le fond transparent noir*/
+	.dark-overlay {
+		height: 300px;
+		background-color: rgba(0, 95, 107, 0.6);
+		transition: opacity .25s ease;
+		opacity: 0;
+		z-index: 9;
+	}
+
+	/* Div contenant le bouton "Nom produit" */
   .btn-card-fav-produit {
     top: 45%;
     height: auto;
 		transition: opacity .25s ease;
 		opacity: 0;
+		z-index: 10;
   }
 
-		/* Input bouton "Ajouter au panier" */
+		/* Input bouton "Nom produit" */
 		.btn-acheter-fav {
 			display: block;
 			height: 40px;
@@ -184,4 +218,10 @@ footer a {
 
 			.width-btn-fav {
 				width: 150px;
+			}
+
+			/* Balise p en-dessous du bouton "Nom Produit" */
+			.nom-startup {
+				font-size: 9pt;
+				margin-top: 10px;
 			}
