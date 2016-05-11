@@ -139,11 +139,16 @@ footer a {
 .sizeInput {
 	width: 250px;
 	padding: 10px;
+	margin: 10px 0;
+}
+
+p {
+	margin: 0px;
 }
 
 /*____Acces validé*/
 
-#containerAcces {
+#containerAcces, #containerNewUs {
 	width: 80%;
 	margin: auto;
 	background-color: white;
@@ -167,9 +172,10 @@ footer a {
 #checkbox {
 	width: 80%;
 	text-align: left;
+	padding-bottom: 10px;
 }
 
-#lastShop {
+#lastShop, #containerPaiement {
 	width: 80%;
 	margin: auto;
 	padding: 20px 0;
@@ -196,3 +202,11 @@ footer a {
 	padding: 10px;
 }
 
+#paiement {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.infoCard {
+	text-align: left;
+}
