@@ -1,0 +1,308 @@
+body {
+	font-family: open sans;
+}
+/* DEBUT nav et footer */
+#menu ul {
+	width: 100%;
+	height: 50px;
+	background-color: #008c9e;
+	text-align: right;
+	border-bottom: 1px solid;
+	padding-left: 0px;
+}
+
+#menu li:first-child {
+	float: left;
+}
+
+#menu li img {
+	width: 30px;
+}
+
+#menu ul li {
+	display: inline-block;
+	margin: 10px 15px;
+
+}
+
+#menu ul li ul{
+	display: none;
+}
+
+#menu ul li:hover ul {
+	display: block;
+	padding-left: 0px;
+	margin-left: 0px;
+	position: absolute;
+	width:100px;
+	height: auto;
+	top: 50px;
+	right: 95px;
+	text-align: left;
+}
+
+#search {
+	border-radius:20px;
+	padding-left: 10px;
+}
+
+#menu a {
+	list-style: none;
+	color: white;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	list-style: none;
+	color: white;
+	text-decoration: none;
+	border-bottom: 2px solid white;
+	padding-bottom: 15px;
+}
+
+i {
+	margin: 5px;
+	color: white;
+}
+
+#containerProduits {
+	width: 100%;
+	height: auto;
+}
+
+footer {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+footer ul {
+	display: inline-block;
+	list-style: none;
+	text-align: left;
+	padding: 30px;
+}
+
+footer li:first-child {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+footer a {
+	color: black;
+}
+
+#reseauxSociaux {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	padding-top: 40px;
+	border-top: 1px solid #008c9e;
+}
+
+#reseauxSociaux li {
+	display: inline-block;
+	margin: 10px;
+}
+
+#reseauxSociaux p {
+	font-weight: bold;
+}
+
+#reseauxSociaux i {
+	font-size: 30px;
+	color: #008c9e;
+}
+
+/* FIN nav et footer */
+
+
+
+
+
+#container_startup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+#card {
+	width: 800px;
+	height: 220px;
+	/*background-color: #CECECE;*/
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #F5F5F5;
+	box-shadow: 5px 5px 10px 0px #ECEFF1;
+	margin-top: 30px;
+}
+#card_haut {
+	/*background-color: red;*/
+	width: 700px;
+	height: 90px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#card_bas {
+	/*background-color: blue;*/
+	width: 700px;
+	height: 90px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#logo_start img {
+	width: 250px;
+	height: auto;
+}
+#img_produit img {
+	width: 100px;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-left: 50px;
+}
+#button_click input {
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #CECECE;
+	border: 1px solid  #CECECE;
+	box-shadow: 5px 5px 10px 0px #ECEFF1;
+	/*margin-top: 20px;*/
+	margin-left: 100px;
+
+}
+#logoEtNomStart {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#nom_start h3 {
+	font-size: 30px;
+	margin-left: 40px;
+	color:#CECECE;
+	font-style: italic;
+}
+#text_start p {
+	text-align: justify;
+}
+
+#boutonAncre {
+	position: fixed;
+	top:590px;
+  right:20px;
+  bottom:0;
+}
+#boutonAncre .fa-circle {
+	color: #008C9E;
+}
+
+
+
+
+
+/*PANIER*/
+
+/*BOUTONs  1 2 3 4*/
+#boutons_validation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+#boutons_validation .fa-circle {
+	border: 1px solid #008C9E;
+	border-radius: 50%;
+}
+.cercle_valide {
+	border: 1px solid #CECECE !important;
+}
+.chiffre_valide {
+	color: #CECECE !important;
+}
+#boutons_validation .fa-inverse {
+	color: #008C9E;
+}
+#boutons_validation span {
+	margin:10px 40px;
+}
+hr.style1{
+  width: 347px;
+	border-top: 1px solid #CECECE;
+}
+hr {
+	position: absolute;
+	left:320px;
+	top:113px;
+	z-index: -10;
+}
+
+
+#panier_valid_livr_paie {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+#panier_valid_livr_paie p {
+	margin: 10px 30px;
+	color: #008C9E;
+}
+#panier_valid_livr_paie p:first-child {
+	color: #CECECE;
+}
+/*BOUTONS  1 2 3 4*/
+
+
+/*tableau produit achat*/
+#tableau_vente {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+table, th, td {
+    border: 1px solid #CECECE;
+    border-collapse: collapse;
+}
+
+.ligne_titre_commande th{
+	background-color: #CECECE;
+	color: white;
+	text-align: center;
+}
+table tr {
+	height: 50px;
+}
+
+.ligne_produit td {
+	text-align: center;
+}
+#button_submit {
+	background-color: #CECECE;
+	color: white;
+	border: 1px solid #CECECE;
+	border-radius: 3px;
+	width: 100px;
+	height: 30px;
+	align-self: flex-end;
+	margin-right: 95px;
+	margin-top: 20px;
+}
+/*tableau produit achat*/
