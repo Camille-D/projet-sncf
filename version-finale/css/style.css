@@ -1,5 +1,6 @@
 body {
 	font-family: open sans;
+	background-color: #DBE0DE;
 }
 /* DEBUT nav et footer */
 #menu ul {
@@ -9,7 +10,7 @@ body {
 	text-align: right;
 	/*border-bottom: 1px solid #CECECE;*/
 	padding-left: 0px;
-	margin: 0px;
+	margin-bottom: 0px;
 }
 
 #menu li:first-child {
