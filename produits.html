@@ -33,27 +33,42 @@
 	</nav>
 	<!-- NAV -->
 
+<!-- banniere -->
+<div id="banniere_haute">
+	<img src="image/objets-connectes.png" alt="">
+	<h3>Les meilleurs produits Tech made in France</h3>
+</div>
+
+<!-- banniere -->
 
 
 
 
-	<div id = "container_startup">
-		<div id="card" ng-repeat="service in services | filter:searchStartup">
-			<div id="card_haut">
-				<div id="logoEtNomStart">
-						<div id="logo_start">
-							<img src="{{service.image}}" alt="logo-start">
+	<div id = "container_produits">
+		<div id="card_produit" ng-repeat="service in services">
+
+				<div id="cardProduitDetail">
+
+						<div id="produit_photo">
+								<div class="banner"><p>{{service.crownfunding}}</p></div>
+							<img src="{{service.produit}}" alt="photo produit">
 						</div>
-						<div id="nom_start">
+						<div id="produit_nom">
 							<h3>{{service.title}}</h3>
 						</div>
-				</div>
-						<div id="button_click">
-							<input type="button" value="Venez voir !" alt="Venez voir notre produit !" title="Venez voir notre produit !" />
+
+						<div id="button_fiche_produit">
+							<div class="byImage">
+								<p>by</p>
+								<img src="{{service.image}}" alt="" value="by">
+							</div>
+							<a href="">+ d'infos</a>
 						</div>
+					</div>
+
 			</div>
 
-			<div id="card_bas">
+			<!-- <div id="card_bas">
 					<div id="text_start">
 						<p>{{service.texte}}</p>
 						<a href="{{service.url}}" target=_blank>{{service.url}}</a>
@@ -61,9 +76,9 @@
 					<div id="img_produit">
 						<img src="{{service.produit}}" alt="Notre produit">
 					</div>
-			</div>
+			</div> -->
 	</div>
-</div>
+
 
 
 	<!-- FOOTER -->
