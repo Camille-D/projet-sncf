@@ -22,6 +22,7 @@ $scope.panier_valide4 = true;
 $scope.livraison = false;
 $scope.tableau_vente_finale = false;
 $scope.diapoFinalAchat = false;
+$scope.modal_box_produit = false;
 
 $scope.submit = function() {
 			$scope.isActive1 = !$scope.isActive1;
@@ -298,4 +299,12 @@ $scope.finalFinalSubmit = function() {
 	$scope.isActive4 = true;
 	$scope.panier_valide4 = true;
 }
+
+
+
+
+$scope.detail_produit = function(selected) {
+  $scope.modal_box_produit = true;
+}
+
 });
