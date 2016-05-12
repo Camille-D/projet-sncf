@@ -41,10 +41,11 @@ body {
 	margin-left: 0px;
 	position: absolute;
 	width:120px;
-	height: 100px;
+	height: 90px;
 	top: 50px;
-	right: 95px;
+	right: 120px;
 	text-align: left;
+	z-index: 10;
 }
 #menu ul li:hover ul li {
 	margin-bottom: 5px;
