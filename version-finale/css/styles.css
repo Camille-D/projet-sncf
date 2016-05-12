@@ -15,12 +15,12 @@ body {
 	margin-bottom: 0px;
 }
 
-#menu li:first-child, #menu li:nth-child(2) {
+#menu li:first-child {
 	float: left;
 }
 
 #menu li img {
-	width: 30px;
+	width: 200px;
 }
 
 #menu ul li {

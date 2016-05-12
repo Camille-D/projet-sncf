@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="en" >
 <head>
 	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<title>Les start'up</title>
+	<title>Les produits</title>
 </head>
 
 <body ng-app="myApp"  ng-controller="myCtrl">
@@ -16,49 +16,61 @@
 	<!-- NAV -->
 
 	<nav id="menu">
-				<ul>
-					<li><a href="index.html"><img src="image/vitrinelogo.png" alt=""></a></li>
-					<li><i class="fa fa-search" aria-hidden="true"></i>
-					<input id='search' type="text" placeholder="Recherche..."></li>
-					<li><a href="start_up.html">Startup's</a></li>
-					<li><a href="produits.html">Produits</a></li>
-					<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
-						<ul>
-							<li><a href="connexionPro.html">Professionnel</a></li>
-							<li><a href="connexion.html">Particulier</a></li>
-						</ul>
-					</li>
-					<li><a href="panier.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+		<ul>
+			<li><a href="index.html"><img src="image/vitrinelogo.png" alt=""></a></li>
+			<li><i class="fa fa-search" aria-hidden="true"></i>
+			<input id='search' type="text" placeholder="Recherche..." ng-model="searchStartup"></li>
+			<li><a href="start">Startup's</a></li>
+			<li><a href="#">Produits</a></li>
+			<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
+				<ul id='essai'>
+					<li><a href="">Professionnel</a></li>
+					<li><a href="">Particulier</a></li>
 				</ul>
-			</nav>
+			</li>
+			<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+		</ul>
+	</nav>
 	<!-- NAV -->
 
+<!-- banniere -->
+<div id="banniere_haute">
+	<img src="image/tech.jpg" alt="">
+	<div id= "ligne_blanche_titre">
+		<h3>Les meilleurs produits Tech <em> made in France</em></h3>
+	</div>
+</div>
 
-			<div id="banniere_haute">
-				<img src="image/buy.jpg" alt="">
-				<div id= "ligne_blanche_titre">
-					<h3>Mes produits</h3>
-				</div>
-			</div>
+<!-- banniere -->
 
 
-	<div id = "container_startup">
-		<div id="card" ng-repeat="service in services | filter:searchStartup">
-			<div id="card_haut">
-				<div id="logoEtNomStart">
-						<div id="logo_start">
-							<img src="{{service.image}}" alt="logo-start">
+
+
+	<div id = "container_produits">
+		<div id="card_produit" ng-repeat="service in services | filter:searchStartup">
+
+				<div id="cardProduitDetail">
+
+						<div id="produit_photo">
+								<div class="banner"><p>{{service.crownfunding}}</p></div>
+							<img src="{{service.produit}}" alt="photo produit">
 						</div>
-						<div id="nom_start">
+						<div id="produit_nom">
 							<h3>{{service.title}}</h3>
 						</div>
-				</div>
-						<div id="button_click">
-							<input type="button" value="Venez voir !" alt="Venez voir notre produit !" title="Venez voir notre produit !" />
+
+						<div id="button_fiche_produit">
+							<div class="byImage">
+								<p>by</p>
+								<img src="{{service.image}}" alt="" value="by">
+							</div>
+							<a href="">+ d'infos</a>
 						</div>
+					</div>
+
 			</div>
 
-			<div id="card_bas">
+			<!-- <div id="card_bas">
 					<div id="text_start">
 						<p>{{service.texte}}</p>
 						<a href="{{service.url}}" target=_blank>{{service.url}}</a>
@@ -66,9 +78,9 @@
 					<div id="img_produit">
 						<img src="{{service.produit}}" alt="Notre produit">
 					</div>
-			</div>
+			</div> -->
 	</div>
-</div>
+
 
 
 	<!-- FOOTER -->
