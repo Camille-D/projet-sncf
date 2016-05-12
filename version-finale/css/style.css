@@ -70,6 +70,10 @@ body {
 	padding-bottom: 15px;
 }
 
+#menu a:first-child:hover {
+	border-bottom: none;
+}
+
 i {
 	margin: 5px;
 	color: white;
