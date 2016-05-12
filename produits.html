@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="angular.js"></script>
-	<title>Les start'up</title>
+	<title>Les produits</title>
 </head>
 
 <body ng-app="myApp"  ng-controller="myCtrl">
@@ -35,8 +35,10 @@
 
 <!-- banniere -->
 <div id="banniere_haute">
-	<img src="image/objets-connectes.png" alt="">
-	<h3>Les meilleurs produits Tech made in France</h3>
+	<img src="image/tech.jpg" alt="">
+	<div id= "ligne_blanche_titre">
+		<h3>Les meilleurs produits Tech <em> made in France</em></h3>
+	</div>
 </div>
 
 <!-- banniere -->
@@ -45,7 +47,7 @@
 
 
 	<div id = "container_produits">
-		<div id="card_produit" ng-repeat="service in services">
+		<div id="card_produit" ng-repeat="service in services | filter:searchStartup">
 
 				<div id="cardProduitDetail">
 
