@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js'></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<title>Les start'up</title>
+</head>
+
+<body ng-app="myApp"  ng-controller="myCtrl">
+	<a id="haut"></a>
+
+
+	<!-- NAV -->
+
+	<nav id="menu">
+				<ul>
+					<li><a href="index.html"><img src="image/vitrine-1.png" alt=""></a></li>
+					<li><a href="index.html"><h4>La vitrine des innovations</h4></a></li>
+					<li><i class="fa fa-search" aria-hidden="true"></i>
+					<input id='search' type="text" placeholder="Recherche..."></li>
+					<li><a href="start_up.html">Startup's</a></li>
+					<li><a href="produits.html">Produits</a></li>
+					<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
+						<ul>
+							<li><a href="connexionPro.html">Professionnel</a></li>
+							<li><a href="connexion.html">Particulier</a></li>
+						</ul>
+					</li>
+					<li><a href="panier.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+				</ul>
+			</nav>
+	<!-- NAV -->
+
+
+
+
+
+	<div id = "container_startup">
+		<div id="card" ng-repeat="service in services | filter:searchStartup">
+			<div id="card_haut">
+				<div id="logoEtNomStart">
+						<div id="logo_start">
+							<img src="{{service.image}}" alt="logo-start">
+						</div>
+						<div id="nom_start">
+							<h3>{{service.title}}</h3>
+						</div>
+				</div>
+						<div id="button_click">
+							<input type="button" value="Venez voir !" alt="Venez voir notre produit !" title="Venez voir notre produit !" />
+						</div>
+			</div>
+
+			<div id="card_bas">
+					<div id="text_start">
+						<p>{{service.texte}}</p>
+						<a href="{{service.url}}" target=_blank>{{service.url}}</a>
+					</div>
+					<div id="img_produit">
+						<img src="{{service.produit}}" alt="Notre produit">
+					</div>
+			</div>
+	</div>
+</div>
+
+
+	<!-- FOOTER -->
+	<footer>
+		<ul>
+			<li><a href="">Société</a></li>
+			<li><a href="">Nous contacter</a></li>
+			<li><a href="">Règles</a></li>
+			<li><a href="">Conditions générales et confidentialité</a></li>
+		</ul>
+		<ul>
+			<li><a href="">Découvrir</a></li>
+			<li><a href="">Confiance et sécurité</a></li>
+			<li><a href="">Application mobile</a></li>
+			<li><a href="">Plan du site</a></li>
+		</ul>
+		<div id="reseauxSociaux">
+			<p>Rejoignez-nous sur</p>
+			<ul>
+				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- FOOTER -->
+
+
+	<!-- ANCRE -->
+	<a id="ancre" href="#haut">
+		<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x"></i>
+		<i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+	</span></a>
+	<!-- ANCRE -->
+
+	<script src="js/app-celia.js"></script>
+	<script src="js/controlScop-celia.js"></script>
+</body>
+</html>
