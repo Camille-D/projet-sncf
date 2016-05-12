@@ -178,7 +178,10 @@ app.controller('myCtrl', function($scope) {
 		"url" : "http://sevenhugs.com/fr/"
 	}
 		]
-
+	$scope.count = 0;
+	$scope.acheter = function () {
+		$scope.count = $scope.count +1;
+	};
 	$scope.myFilter1 = function(service) {
 		return service.imageFavori1? true:false;
 	};

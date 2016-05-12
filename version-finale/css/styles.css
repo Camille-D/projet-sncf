@@ -28,6 +28,9 @@ body {
 	display: inline-block;
 	margin: 10px 15px;
 }
+#menu ul li a {
+	outline-style:none;
+}
 
 #menu ul li ul{
 	display: none;
@@ -419,3 +422,16 @@ p {
 				flex-flow: row;
 				margin-top: 20px;
 			}
+
+
+
+/*CHIFFRE PANIER*/
+			#cercleChiffrePanier {
+				border-radius: 50%;
+				background-color: white;
+				color:#008c9e;
+				padding: 2px 7px;
+				font-size: 11px;
+				margin-left: -8px !important;
+			}
+/*CHIFFRE PANIER*/

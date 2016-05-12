@@ -23,6 +23,8 @@ $scope.livraison = false;
 $scope.tableau_vente_finale = false;
 $scope.diapoFinalAchat = false;
 $scope.modal_box_produit = false;
+$scope.count = 0;
+
 
 $scope.submit = function() {
 			$scope.isActive1 = !$scope.isActive1;
@@ -336,5 +338,8 @@ $scope.detail_produit = function() {
 };
 $scope.close_modal = function () {
 	$scope.modal_box_produit = false;
+};
+$scope.acheter = function () {
+	$scope.count = $scope.count +1;
 };
 });

@@ -27,10 +27,10 @@ body {
 	margin-top: 10px;
 	margin-left: 15px;
 	margin-right: 15px;
-
-
 }
-
+#menu ul li a {
+	outline-style:none;
+}
 #menu ul li ul{
 	display: none;
 }
@@ -157,6 +157,8 @@ footer a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 40px;
+	margin-top: 30px;
 }
 
 
@@ -722,13 +724,15 @@ em:hover {
 	flex-direction: row;
 	justify-content: center;
 	width: 800px;
+	border-radius: 5px;
 	border: 1px solid #CECECE;
 	box-shadow: 10px 10px 10px 0px #ECEFF1;
 	padding-top: 20px;
 	padding-top: 40px;
-	position: absolute;
-	top: 500px;
-	right: 240px;
+	position: fixed; left: 30px; top: 30px;
+	z-index: 9999;
+	/*top: 500px;*/
+	/*right: 240px;*/
 	background-color: white;
 }
 #text_droit img {
@@ -765,7 +769,14 @@ em:hover {
 	margin-left: 65px;
 	top:0px;
 	cursor: pointer;
-
 }
 
+#cercleChiffrePanier {
+	border-radius: 50%;
+	background-color: white;
+	color:#008c9e;
+	padding: 2px 7px;
+	font-size: 11px;
+	margin-left: -8px !important;
+}
 /*MODAL*/
