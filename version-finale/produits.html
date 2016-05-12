@@ -20,26 +20,26 @@
 			<li><a href="index.html"><img src="image/vitrinelogo.png" alt=""></a></li>
 			<li><i class="fa fa-search" aria-hidden="true"></i>
 			<input id='search' type="text" placeholder="Recherche..." ng-model="searchStartup"></li>
-			<li><a href="start">Startup's</a></li>
-			<li><a href="#">Produits</a></li>
+			<li><a href="start_up.html">Startup's</a></li>
+			<li><a href="produits.html">Produits</a></li>
 			<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
 				<ul id='essai'>
-					<li><a href="">Professionnel</a></li>
-					<li><a href="">Particulier</a></li>
+					<li><a href="connexionPro.html">Professionnel</a></li>
+					<li><a href="connexion.html">Particulier</a></li>
 				</ul>
 			</li>
-			<li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
+			<li><a href="panier.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a></li>
 		</ul>
 	</nav>
 	<!-- NAV -->
 
 <!-- banniere -->
-<div id="banniere_haute">
-	<img src="image/tech.jpg" alt="">
-	<div id= "ligne_blanche_titre">
-		<h3>Les meilleurs produits Tech <em> made in France</em></h3>
+	<div id="banniere_haute">
+		<img src="image/tech.jpg" alt="">
+		<div id= "ligne_blanche_titre">
+			<h3>Les meilleurs produits Tech <em> made in France</em></h3>
+		</div>
 	</div>
-</div>
 
 <!-- banniere -->
 
@@ -49,26 +49,25 @@
 	<div id = "container_produits">
 		<div id="card_produit" ng-repeat="service in services | filter:searchStartup">
 
-				<div id="cardProduitDetail">
+			<div id="cardProduitDetail">
 
-						<div id="produit_photo">
-								<div class="banner"><p>{{service.crownfunding}}</p></div>
-							<img src="{{service.produit}}" alt="photo produit">
-						</div>
-						<div id="produit_nom">
-							<h3>{{service.title}}</h3>
-						</div>
-
-						<div id="button_fiche_produit">
-							<div class="byImage">
-								<p>by</p>
-								<img src="{{service.image}}" alt="" value="by">
-							</div>
-							<a href="">+ d'infos</a>
-						</div>
+				<div id="produit_photo">
+					<div class="banner"><p>{{service.crownfunding}}</p></div>
+						<img src="{{service.produit}}" alt="photo produit">
 					</div>
+					<div id="produit_nom">
+					<h3>{{service.title}}</h3>
+				</div>
 
+				<div id="button_fiche_produit">
+					<div class="byImage">
+						<p>by</p>
+						<img src="{{service.image}}" alt="" value="by">
+					</div>
+					<a href="">+ d'infos</a>
+				</div>
 			</div>
+		</div>
 
 			<!-- <div id="card_bas">
 					<div id="text_start">
