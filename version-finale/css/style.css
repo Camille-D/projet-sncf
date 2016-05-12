@@ -23,7 +23,11 @@ body {
 
 #menu ul li {
 	display: inline-block;
-	margin: 10px 15px;
+	/*margin: 10px 15px;*/
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+
 
 }
 
@@ -696,8 +700,8 @@ em:hover {
 	text-align: center;
 	font-size: 11px;
   background-color: #008c9e;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 16;
 	position: absolute;
@@ -709,3 +713,59 @@ em:hover {
 }
 
 /*container produits*/
+
+
+
+/*MODAL*/
+#containerProduitsModal {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 800px;
+	border: 1px solid #CECECE;
+	box-shadow: 10px 10px 10px 0px #ECEFF1;
+	padding-top: 20px;
+	padding-top: 40px;
+	position: absolute;
+	top: 500px;
+	right: 240px;
+	background-color: white;
+}
+#text_droit img {
+	width: 100px;
+	margin-left: 300px;
+}
+#buttonPrixAcheter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+#text_droit {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+#text_droit h3 {
+	margin-top: 0px;
+}
+#buttonPrixAcheter input {
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #CECECE;
+	border: 1px solid  #CECECE;
+	box-shadow: 5px 5px 10px 0px #ECEFF1;
+}
+
+#buttonPrixAcheter p {
+	margin: 0px;
+}
+.fa-times {
+	color: #008c9e;
+	margin-left: 65px;
+	top:0px;
+	cursor: pointer;
+
+}
+
+/*MODAL*/
