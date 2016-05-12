@@ -2,6 +2,7 @@
 
 body {
 	background-color: #DBE0DE;
+	font-family: open sans;
 }
 
 #menu ul {
@@ -9,7 +10,7 @@ body {
 	height: 50px;
 	background-color: #008c9e;
 	text-align: right;
-	border-bottom: 1px solid;
+	/*border-bottom: 1px solid;*/
 	padding-left: 0px;
 	margin-bottom: 0px;
 }
