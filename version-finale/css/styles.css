@@ -269,27 +269,6 @@ p {
 		flex-direction: row;
 	}
 
-		/*.bg-white {
-			position: absolute;
-			background-color: #ffffff;
-			top: 150px;
-			width: 650px;
-			height: auto;
-		}
-
-		.bg-white h2 {
-			margin: 0;
-			padding-left: 20px;
-		}*/
-
-	/*.container-textHeader {
-		position: absolute;
-		top: 30px;
-		width: 40%;
-		height: 100px;
-		margin: 0 auto;
-	}*/
-
 
 /* ------------------------------------ *\
 			PRODUITS FAV
@@ -309,9 +288,19 @@ p {
 .tx-white {
 	color: #ffffff;
 }
+#txAccueil {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
 
-
-
+.container-titre-selection {
+	border-top: 1px solid #CECECE;
+	border-radius: 5px;
+}
+.container-titre-selection h3 {
+	margin-top: 35px;
+}
 .titre-selection {
 	margin-bottom: 30px;
 }
@@ -352,7 +341,9 @@ p {
 	.card-fav:hover .dark-overlay {
 		opacity: 1;
 	}
-
+	.card-fav:hover .dark-overlay2 {
+		opacity: 1;
+	}
 	/* Image de la Card */
 	.pic-produit-fav {
 		height: 300px;
@@ -362,6 +353,13 @@ p {
 	.dark-overlay {
 		height: 300px;
 		background-color: rgba(0, 95, 107, 0.6);
+		transition: opacity .25s ease;
+		opacity: 0;
+		z-index: 9;
+	}
+	.dark-overlay2 {
+		height: 300px;
+		background-color: rgba(25, 220, 213, 0.7);
 		transition: opacity .25s ease;
 		opacity: 0;
 		z-index: 9;
@@ -384,6 +382,16 @@ p {
 			background-color: rgba(0, 0, 0, 0);
 			margin: 0 auto;
 			font-size: 18px;
+		}
+
+
+
+
+		.btn-card-fav-produit h5 {
+				margin-top: 50px;
+				margin-left: 30px;
+				color: white;
+				font-size: 16px;
 		}
 
 			.width-btn-fav {

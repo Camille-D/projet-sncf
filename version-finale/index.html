@@ -51,6 +51,10 @@
 		<!-- MAIN CONTAINER -->
 
 		<div id="containerProduits">
+			<div id="txAccueil">
+				<h2>Bienvenue dans le futur de la Technologie <br>
+				Trouvez ou Contribuez à financer les produits de demain !</h2>
+			</div>
 			<div class="container-titre-selection">
 				<h3 class="titre-selection text-center">Notre sélection du mois</h3>
 			</div>
@@ -68,11 +72,12 @@
 
 			<div class="container-cards-produits-bas">
 				<div class="card-fav width-card-fav" ng-repeat="service in services | filter: myFilter2">
-					<div class="dark-overlay width-card-fav position-elem"></div>
+					<div class="dark-overlay2 width-card-fav position-elem"></div>
 					<div class="pic-produit-fav width-card-fav" ng-style="{'background' : 'url(' + service.imageFavori2 +') no-repeat center/cover'}"></div>
 					<div class="btn-card-fav-produit width-card-fav position-elem ">
 						<a href="produits.html"><input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav" ></a>
 						<a href="start_up.html"><p class="nom-startup text-center tx-white">par {{ service.title }}</p></a>
+						<h5 class="produitAFinancer">Venez participer au financement !</h5>
 					</div>
 				</div>
 			</div>
