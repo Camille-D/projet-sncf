@@ -28,28 +28,33 @@
 			<li id="cercleChiffrePanier">2</li>
 		</ul>
 	</nav>
-	<div ng-controller="myCtrlConnexion">
+	<form ng-controller="myCtrlConnexion" name="myForm">
 		<div id="containerConnexion" ng-show="acces">
 			<div id="utilisateur" style="border-right: 1px solid #d8d8d8;">
 				<h3>ON SE CONNAÎT DÉJÀ ?</h3>
 				<p>Connectez-vous pour retrouver vos avantages et les informations de votre compte.</p>
 				<p>E-mail*</p>
-				<input class="sizeInput" type="text" placeholder="votre adresse e-mail" ng-model="mail" required>
+				<input class="sizeInput" name="mail" type="email" placeholder="votre adresse e-mail" ng-model="mail" required>
+				<div ng-messages = "myForm.mail.$error" ng-messages-include='erreurs.html'></div>
+
 				<p>Mot de passe*</p>
-				<input class="sizeInput" type="text" placeholder="votre mot de passe" ng-model="password" required>
-				<div class="button" ng-click="connecter()"><button>Me connecter</button></div>
+				<input class="sizeInput" name="password" type="password" placeholder="votre mot de passe" ng-model="password" required>
+				<!-- <div ng-messages = "myForm.password.$error" ng-messages-include='erreurs.html'></div> -->
+
+				<div class="button" type="submit" ng-click="connecter()"><button>Me connecter</button></div>
+
 			</div>
 			<div id="newUtilisateur">
 				<h3>PREMIÈRE VISITE ?</h3>
 				<p>Bonjour cher inconnu, on ne se connaît pas encore. Aucun problème, continuez c’est tout droit.</p>
-				<div class="button"><button ng-click="newUs = !newUs">Créer mon compte</button></div>
+				<div class="button"><button type="submit" ng-click="newUs = !newUs">Créer mon compte</button></div>
 			</div>
 		</div>
-
+	
 		<!-- _______ acces autorisé_________ -->
 
-	<div id="containerAcces" ng-show="!acces">
-		<div class="infoPerso">
+	<div id="containerAcces" ng-show="!acces"> <!-- ici -->
+		<div class="infoPerso" name"myForm">
 			<div id="checkbox">
 					<h4>MODIFIER VOS INFORMATIONS PERSONNELLES</h4>
 					<p>Civilité*:</p>
@@ -60,19 +65,27 @@
 				<div class="infos">
 					<div>
 						<p>Prénom*:</p>
-						<input class="sizeInput" type="text" placeholder="votre prénom">
+						<input class="sizeInput" name="prenom" type="text" placeholder="votre prénom" required ng-minlength="1">
+						<div ng-messages = "myForm.prenom.$error" ng-messages-include='erreurs.html'></div>
+
 						<p>Votre adresse e-mail*:</p>
-						<input class="sizeInput" type="text" placeholder="votre adresse e-mail">
+						<input class="sizeInput" name="mail" type="email" placeholder="votre adresse e-mail" required ng-minlength="1">
+						<div ng-messages = "myForm.mail.$error" ng-messages-include='erreurs.html'></div>
+
 						<p>Votre date de naissance*:</p>
-						<input class="sizeInput" type="text" placeholder="votre adresse date de naissance">
+						<input class="sizeInput" name="date" type="number" placeholder="votre adresse date de naissance" required ng-minlength="1">
+						<div ng-messages = "myForm.date.$error" ng-messages-include='erreurs.html'></div>
 					</div>
 					<div>
 						<p>Nom*:</p>
-						<input class="sizeInput" type="text" placeholder="votre nom">
+						<input class="sizeInput" name="nom" type="text" placeholder="votre nom" required ng-minlength="1">
+						<div ng-messages = "myForm.nom.$error" ng-messages-include='erreurs.html'></div>
 						<p>Pseudo*:</p>
-						<input class="sizeInput" type="text" placeholder="votre pseudo">
+						<input class="sizeInput" name="pseudo" type="text" placeholder="votre pseudo" required ng-minlength="1">
+						<div ng-messages = "myForm.pseudo.$error" ng-messages-include='erreurs.html'></div>
 						<p>Changer votre mot de passe*:</p>
-						<input class="sizeInput" type="text" placeholder="***********">
+						<input class="sizeInput" name="password" type="password" placeholder="***********" required ng-minlength="1">
+						<div ng-messages = "myForm.password.$error" ng-messages-include='erreurs.html'></div>
 					</div>
 				</div>
 				<!-- <div class='button'><button>Valider</button></div> -->
@@ -118,13 +131,19 @@
 				<div id="paiement">
 					<div class="infoCard">
 						<p>Nom du propriétaire*: </p>
-						<input class="sizeInput" type="text" placeholder="M. SIMPLON.CO">
+						<input class="sizeInput" name="nom" type="text" placeholder="M. SIMPLON.CO" required ng-minlength="1">
+						<div ng-messages = "myForm.nom.$error" ng-messages-include='erreurs.html'></div>
+
 						<p>Numéro de la carte*: </p>
-						<input class="sizeInput" type="text" placeholder="******************0000">
-						<p>Numéro de la carte*: </p>
-						<input class="sizeInput" type="text" placeholder="00" style="width: 60px;"> / <input class="sizeInput" type="text" placeholder="00" style="width: 60px;">
+						<input class="sizeInput" name="carte" type="number" placeholder="******************0000" required ng-minlength="1">
+						<div ng-messages = "myForm.carte.$error" ng-messages-include='erreurs.html'></div>
+
+						<p>Date d'expiration*: </p>
+						<input class="sizeInput" name="expiration" type="text" placeholder="00" style="width: 60px;" required ng-minlength="1"> / <input class="sizeInput" name="expiration" type="text" placeholder="00" style="width: 60px;" required ng-minlength="1"> <div ng-messages = "myForm.expiration.$error" ng-messages-include='erreurs.html'></div>
+
 						<p>Vérification de la carte *: </p>
-						<input class="sizeInput" type="text" placeholder="0000">
+						<input class="sizeInput" name="protection" type="number" placeholder="0000" required ng-minlength="1">
+						<div ng-messages = "myForm.protection.$error" ng-messages-include='erreurs.html'></div>
 						<div class='button'><button>Valider</button></div>
 					</div>
 					<div class="infoCard">
@@ -146,29 +165,29 @@
 					<div class="infos">
 						<div>
 							<p>Prénom*:</p>
-							<input class="sizeInput" type="text" placeholder="votre prénom">
+							<input class="sizeInput" type="text" placeholder="votre prénom" required ng-minlength="1">
 							<p>Votre adresse*:</p>
-							<input class="sizeInput" type="text" placeholder="votre adresse">
+							<input class="sizeInput" type="text" placeholder="votre adresse" required ng-minlength="1">
 							<p>Votre adresse e-mail*:</p>
-							<input class="sizeInput" type="text" placeholder="votre adresse e-mail">
+							<input class="sizeInput" type="text" placeholder="votre adresse e-mail" required ng-minlength="1">
 							<p>Votre date de naissance*:</p>
-							<input class="sizeInput" type="text" placeholder="votre adresse date de naissance">
+							<input class="sizeInput" type="text" placeholder="votre adresse date de naissance" required ng-minlength="3">
 						</div>
 						<div>
 							<p>Nom*:</p>
-							<input class="sizeInput" type="text" placeholder="votre nom">
+							<input class="sizeInput" type="text" placeholder="votre nom" required ng-minlength="1">
 							<p>Code postal*:</p>
-							<input class="sizeInput" type="text" placeholder="votre code postal">
+							<input class="sizeInput" type="text" placeholder="votre code postal" required ng-minlength="1">
 							<p>Pseudo*:</p>
-							<input class="sizeInput" type="text" placeholder="votre pseudo">
+							<input class="sizeInput" type="text" placeholder="votre pseudo" required ng-minlength="1">
 							<p>Entrer votre mot de passe*:</p>
-							<input class="sizeInput" type="text" placeholder="***********">
+							<input class="sizeInput" type="text" placeholder="***********" required ng-minlength="1">
 						</div>
 					</div>
 					<!-- <div class='button'><button>Valider</button></div> -->
 			</div>
 		</div>
-	</div>
+	</form>
 	<!-- ________________FOOTER____________________ -->
 		<footer>
 			<ul>
