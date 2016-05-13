@@ -20,12 +20,14 @@ body {
 }
 
 #menu li img {
-	width: 200px;
+	width: 40px;
 }
 
 #menu ul li {
 	display: inline-block;
-	margin: 10px 15px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 #menu ul li a {
 	outline-style:none;
@@ -246,13 +248,28 @@ p {
 \* ------------------------------------ */
 
 	.header-homepage {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
 		position: relative;
 		width: 100%;
 		height: 324px;
-		background: url('../image/image_home.jpg') center/100% no-repeat;
+		/*background: url('../image/image_home.jpg') center/100% no-repeat;*/
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/image_home.jpg);
+	}
+	.header-homepage img {
+			width: 1000px;
+			align-self: center;
+	}
+	.bg-white {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
 	}
 
-		.bg-white {
+		/*.bg-white {
 			position: absolute;
 			background-color: #ffffff;
 			top: 150px;
@@ -263,14 +280,15 @@ p {
 		.bg-white h2 {
 			margin: 0;
 			padding-left: 20px;
-		}
+		}*/
 
-	.container-textHeader {
+	/*.container-textHeader {
 		position: absolute;
 		top: 30px;
 		width: 40%;
 		height: 100px;
-	}
+		margin: 0 auto;
+	}*/
 
 
 /* ------------------------------------ *\
@@ -285,7 +303,9 @@ p {
 .position-elem {
 	position: absolute;
 }
-
+.position-elem a {
+	text-decoration: none;
+}
 .tx-white {
 	color: #ffffff;
 }
@@ -363,6 +383,7 @@ p {
 			border: 1px solid #ffffff;
 			background-color: rgba(0, 0, 0, 0);
 			margin: 0 auto;
+			font-size: 18px;
 		}
 
 			.width-btn-fav {
@@ -371,10 +392,13 @@ p {
 
 			/* Balise p en-dessous du bouton "Nom Produit" */
 			.nom-startup {
-				font-size: 9pt;
+				font-size: 12pt;
 				margin-top: 10px;
+				font-style: italic;
 			}
-
+			.position-elem a {
+				outline-style:none;
+			}
 
 			/*____Contact*/
 

@@ -18,10 +18,10 @@
 
 		<nav id="menu">
 			<ul>
-				<li><a href="index.html"><img src="image/vitrinelogo.png" alt=""></a></li>
+				<li><a href="index.html"><img src="image/vitrine-1.png" alt=""></a></li>
 				<li><i class="fa fa-search" aria-hidden="true"></i>
 				<input id='search' type="text" placeholder="Recherche..."></li>
-				<li><a href="start_up.html">Startup's</a></li>
+				<li><a href="start_up.html">Start'up</a></li>
 				<li><a href="produits.html">Produits</a></li>
 				<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a>
 					<ul>
@@ -42,14 +42,7 @@
 		<!-- HEADER -->
 
 		<div class="header-homepage">
-			<div class="container-textHeader">
-				<div class="bg-white">
-					<h2 class="titre-headerHome">La Vitrine de l'innovation</h2>
-					<!-- <p class="text-headerHome">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</p> -->
-				</div>
-			</div>
+					<img src="image/vitrine-homepage.png" alt="">
 		</div>
 
 		<!-- HEADER -->
@@ -67,8 +60,8 @@
 					<div class="dark-overlay width-card-fav position-elem"></div>
 					<div class="pic-produit-fav width-card-fav" ng-style="{'background' : 'url(' + service.imageFavori1 +') no-repeat center/cover'}"></div>
 					<div class="btn-card-fav-produit width-card-fav position-elem ">
-						<input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav">
-						<p class="nom-startup text-center tx-white">par {{ service.title }}</p>
+						<a href="produits.html"><input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav" ></a>
+						<a href="start_up.html"><p class="nom-startup text-center tx-white">par {{ service.title }}</p></a>
 					</div>
 				</div>
 			</div>
@@ -78,8 +71,8 @@
 					<div class="dark-overlay width-card-fav position-elem"></div>
 					<div class="pic-produit-fav width-card-fav" ng-style="{'background' : 'url(' + service.imageFavori2 +') no-repeat center/cover'}"></div>
 					<div class="btn-card-fav-produit width-card-fav position-elem ">
-						<input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav">
-						<p class="nom-startup text-center tx-white">par {{ service.title }}</p>
+						<a href="produits.html"><input type="button" value="{{ service.nomProduit }}" class="btn-acheter-fav tx-white width-btn-fav" ></a>
+						<a href="start_up.html"><p class="nom-startup text-center tx-white">par {{ service.title }}</p></a>
 					</div>
 				</div>
 			</div>
