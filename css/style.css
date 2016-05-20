@@ -1,5 +1,6 @@
 body {
 	font-family: open sans;
+	background-color: #DBE0DE;
 }
 /* DEBUT nav et footer */
 #menu ul {
@@ -9,7 +10,7 @@ body {
 	text-align: right;
 	/*border-bottom: 1px solid #CECECE;*/
 	padding-left: 0px;
-	margin: 0px;
+	margin-bottom: 0px;
 }
 
 #menu li:first-child {
@@ -17,15 +18,19 @@ body {
 }
 
 #menu li img {
-	width: 30px;
+	width: 40px;
 }
 
 #menu ul li {
 	display: inline-block;
-	margin: 10px 15px;
-
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
+#menu ul li a {
+	outline-style:none;
+}
 #menu ul li ul{
 	display: none;
 }
@@ -35,11 +40,15 @@ body {
 	padding-left: 0px;
 	margin-left: 0px;
 	position: absolute;
-	width:100px;
-	height: auto;
+	width:120px;
+	height: 90px;
 	top: 50px;
-	right: 95px;
+	right: 120px;
 	text-align: left;
+	z-index: 10;
+}
+#menu ul li:hover ul li {
+	margin-bottom: 5px;
 }
 
 #search {
@@ -61,6 +70,10 @@ body {
 	padding-bottom: 15px;
 }
 
+#menu a:first-child:hover {
+	border-bottom: none;
+}
+
 i {
 	margin: 5px;
 	color: white;
@@ -71,14 +84,31 @@ i {
 	height: auto;
 }
 
-
-
-
-
-
 /*banniere haute*/
+.header-homepage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	position: relative;
+	width: 100%;
+	height: 324px;
+	/*background: url('../image/image_home.jpg') center/100% no-repeat;*/
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/buy.jpg);
+}
+.header-homepage h3 {
+		font-size: 80px;
+		color: white;
+		align-self: center;
+}
+.bg-white {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
 
-#banniere_haute  {
+/*#banniere_haute  {
 	width: 100%;
 	height: 300px;
 	background-size: cover;
@@ -100,15 +130,7 @@ i {
 	height: 30px;
 	width: 650px;
 	background-color: white;
-}
-
-/*banniere haute*/
-
-
-
-
-
-
+}*/
 
 footer {
 	width: 100%;
@@ -165,7 +187,8 @@ footer a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-top: 30px;
 }
 
 
@@ -223,6 +246,7 @@ footer a {
 	box-shadow: 5px 5px 10px 0px #ECEFF1;
 	/*margin-top: 20px;*/
 	margin-left: 100px;
+
 }
 #logoEtNomStart {
 	display: flex;
@@ -254,10 +278,6 @@ footer a {
 
 
 /*PANIER*/
-
-#container_panier {
-	margin-top: 40px;
-}
 
 /*BOUTONs  1 2 3 4*/
 #boutons_validation {
@@ -712,8 +732,8 @@ em:hover {
 	text-align: center;
 	font-size: 11px;
   background-color: #008c9e;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 16;
 	position: absolute;
@@ -734,13 +754,15 @@ em:hover {
 	flex-direction: row;
 	justify-content: center;
 	width: 800px;
+	border-radius: 5px;
 	border: 1px solid #CECECE;
 	box-shadow: 10px 10px 10px 0px #ECEFF1;
 	padding-top: 20px;
 	padding-top: 40px;
-	position: absolute;
-	top: 500px;
-	right: 240px;
+	position: fixed; left: 30px; top: 30px;
+	z-index: 9999;
+	/*top: 500px;*/
+	/*right: 240px;*/
 	background-color: white;
 }
 #text_droit img {
@@ -772,9 +794,19 @@ em:hover {
 #buttonPrixAcheter p {
 	margin: 0px;
 }
+.fa-times {
+	color: #008c9e;
+	margin-left: 65px;
+	top:0px;
+	cursor: pointer;
+}
 
-
-
-
-
+#cercleChiffrePanier {
+	border-radius: 50%;
+	background-color: white;
+	color:#008c9e;
+	padding: 2px 7px;
+	font-size: 11px;
+	margin-left: -8px !important;
+}
 /*MODAL*/

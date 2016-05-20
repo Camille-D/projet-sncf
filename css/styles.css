@@ -1,5 +1,8 @@
+/*_____________PARTIE DE CAMILLE*/
+
 body {
 	background-color: #DBE0DE;
+	font-family: sans-serif;
 }
 
 #menu ul {
@@ -7,21 +10,27 @@ body {
 	height: 50px;
 	background-color: #008c9e;
 	text-align: right;
-	border-bottom: 1px solid;
+	/*border-bottom: 1px solid;*/
 	padding-left: 0px;
+	margin-bottom: 0px;
 }
 
-#menu li:first-child, #menu li:nth-child(2) {
+#menu li:first-child {
 	float: left;
 }
 
 #menu li img {
-	width: 30px;
+	width: 40px;
 }
 
 #menu ul li {
 	display: inline-block;
-	margin: 10px 15px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#menu ul li a {
+	outline-style:none;
 }
 
 #menu ul li ul{
@@ -34,12 +43,15 @@ body {
 	margin-left: 0px;
 	position: absolute;
 	width:120px;
-	height: 100px;
+	height: 90px;
 	top: 50px;
-	right: 95px;
+	right: 120px;
 	text-align: left;
+	z-index: 10;
 }
-
+#menu ul li:hover ul li {
+	margin-bottom: 10px;
+}
 #search {
 	border-radius:20px;
 	padding-left: 10px;
@@ -57,6 +69,10 @@ body {
 	text-decoration: none;
 	border-bottom: 2px solid white;
 	padding-bottom: 15px;
+}
+
+#menu a:first-child:hover {
+	border-bottom: none;
 }
 
 i {
@@ -211,55 +227,249 @@ p {
 	text-align: left;
 }
 
-/*____Formulaire Contact*/
 
-#containerContact {
+/*_____________PARTIE DE CECILE*/
+
+
+/* DEBUT ancre */
+#boutonAncre {
+	position: fixed;
+  right:20px;
+  bottom:20px;
+	z-index: 1000;
+}
+#boutonAncre .fa-circle {
+	color: #008C9E;
+}
+/* FIN ancre */
+
+/* ------------------------------------ *\
+			HEADER
+\* ------------------------------------ */
+
+	.header-homepage {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		position: relative;
+		width: 100%;
+		height: 324px;
+		/*background: url('../image/image_home.jpg') center/100% no-repeat;*/
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/image_home.jpg);
+	}
+	.header-homepage img {
+			width: 1000px;
+			align-self: center;
+	}
+	.bg-white {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+
+
+/* ------------------------------------ *\
+			PRODUITS FAV
+\* ------------------------------------ */
+
+/* Largeur générale appliquée à chaque élément */
+.width-card-fav {
+  width: 300px;
+}
+
+.position-elem {
+	position: absolute;
+}
+.position-elem a {
+	text-decoration: none;
+}
+.tx-white {
+	color: #ffffff;
+}
+#txAccueil {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.container-titre-selection {
+	border-top: 1px solid #CECECE;
+	border-radius: 5px;
+}
+.container-titre-selection h3 {
+	margin-top: 35px;
+}
+.titre-selection {
+	margin-bottom: 30px;
+}
+
+#containerProduits {
+	width: auto;
+	height: auto;
+	margin: 50px 0 50px 0;
+}
+
+.container-cards-produits-haut {
 	width: 100%;
-	height: 80vh;
+	height: auto;
 	display: flex;
+	flex-flow: row nowrap;
 	justify-content: center;
-	flex-wrap: wrap;
-	margin-bottom: 80px;
 }
 
-
-.input-contact {
-	width: 250px;
-	padding: 10px;
-	margin-bottom: 15px;
-}
-
-#corps-message {
-	width: 350px;
-	height: 45vh;
-}
-
-#objet, #civilite {
-	margin-bottom: 20px;
-	margin-left: 20px;
-}
-
-.confidentialite {
+.container-cards-produits-bas {
+	width: 100%;
+	height: auto;
 	display: flex;
-	flex-flow: row;
-	margin: 10px 0;
+	flex-flow: row nowrap;
+	justify-content: center;
 }
 
-.confidentialite p {
-	padding-left: 5px;
-}
 
-.button-contact button {
-	margin: 0;
-	border-radius:0%;
-	padding: 10px;
-	width: 160px;
-	background-color: #19dcd5;
-	color: white;
-}
+	/* Container de la Card */
+	.card-fav {
+		position: relative;
+		height: auto;
+	}
 
-.contact-inline {
-	display: flex;
-	flex-flow: row;
-	margin-top: 20px;
-}
+	.card-fav:hover .btn-card-fav-produit {
+		opacity: 1;
+	}
+
+	.card-fav:hover .dark-overlay {
+		opacity: 1;
+	}
+	.card-fav:hover .dark-overlay2 {
+		opacity: 1;
+	}
+	/* Image de la Card */
+	.pic-produit-fav {
+		height: 300px;
+	}
+
+	/* Div contenant le fond transparent noir*/
+	.dark-overlay {
+		height: 300px;
+		background-color: rgba(0, 95, 107, 0.6);
+		transition: opacity .25s ease;
+		opacity: 0;
+		z-index: 9;
+	}
+	.dark-overlay2 {
+		height: 300px;
+		background-color: rgba(25, 220, 213, 0.7);
+		transition: opacity .25s ease;
+		opacity: 0;
+		z-index: 9;
+	}
+
+	/* Div contenant le bouton "Nom produit" */
+  .btn-card-fav-produit {
+    top: 45%;
+    height: auto;
+		transition: opacity .25s ease;
+		opacity: 0;
+		z-index: 10;
+  }
+
+		/* Input bouton "Nom produit" */
+		.btn-acheter-fav {
+			display: block;
+			height: 40px;
+			border: 1px solid #ffffff;
+			background-color: rgba(0, 0, 0, 0);
+			margin: 0 auto;
+			font-size: 18px;
+		}
+
+
+
+
+		.btn-card-fav-produit h5 {
+				margin-top: 50px;
+				margin-left: 30px;
+				color: white;
+				font-size: 16px;
+		}
+
+			.width-btn-fav {
+				width: 150px;
+			}
+
+			/* Balise p en-dessous du bouton "Nom Produit" */
+			.nom-startup {
+				font-size: 12pt;
+				margin-top: 10px;
+				font-style: italic;
+			}
+			.position-elem a {
+				outline-style:none;
+			}
+
+			/*____Contact*/
+
+			#containerContact {
+				width: 100%;
+				height: 80vh;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 80px;
+			}
+
+
+			.input-contact {
+				width: 250px;
+				padding: 10px;
+				margin-bottom: 15px;
+			}
+
+			#corps-message {
+				width: 350px;
+				height: 45vh;
+			}
+
+			#objet, #civilite {
+				margin-bottom: 20px;
+				margin-left: 20px;
+			}
+
+			.confidentialite {
+				display: flex;
+				flex-flow: row;
+				margin: 10px 0;
+			}
+
+			.confidentialite p {
+				padding-left: 5px;
+			}
+
+			.button-contact button {
+				margin: 0;
+				border-radius:0%;
+				padding: 10px;
+				width: 160px;
+				background-color: #19dcd5;
+				color: white;
+			}
+
+			.contact-inline {
+				display: flex;
+				flex-flow: row;
+				margin-top: 20px;
+			}
+
+
+
+/*CHIFFRE PANIER*/
+			#cercleChiffrePanier {
+				border-radius: 50%;
+				background-color: white;
+				color:#008c9e;
+				padding: 2px 7px;
+				font-size: 11px;
+				margin-left: -8px !important;
+			}
+/*CHIFFRE PANIER*/
