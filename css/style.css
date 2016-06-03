@@ -744,6 +744,41 @@ em:hover {
 	padding-top: 8px;
 }
 
+.banner-second {
+  height: 30px;
+  width: 220px;
+	text-align: center;
+	font-size: 11px;
+  background-color: rgba(0, 95, 107, 0.6);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 17;
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 52px;
+}
+.banner-second p {
+	padding-top: 8px;
+}
+
+.banner-third {
+  height: 30px;
+  width: 280px;
+	text-align: center;
+	font-size: 11px;
+  background-color: rgba(0, 95, 107, 0.4);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 18;
+	position: absolute;
+	margin-left: 46px;
+	margin-top: 70px;
+}
+.banner-third p {
+	padding-top: 8px;
+}
 /*container produits*/
 
 
