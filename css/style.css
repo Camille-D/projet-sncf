@@ -196,13 +196,8 @@ footer a {
 
 
 #card {
-<<<<<<< HEAD
 	width: 800px;
 	height: 220px;
-=======
-	width: 1000px;
-	height: 300px;
->>>>>>> startup_feature
 	/*background-color: #CECECE;*/
 	border-radius: 5px;
 	display: flex;
@@ -215,13 +210,8 @@ footer a {
 }
 #card_haut {
 	/*background-color: red;*/
-<<<<<<< HEAD
 	width: 700px;
 	height: 90px;
-=======
-	width: 900px;
-	height: 100px;
->>>>>>> startup_feature
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -229,13 +219,8 @@ footer a {
 }
 #card_bas {
 	/*background-color: blue;*/
-<<<<<<< HEAD
 	width: 700px;
 	height: 90px;
-=======
-	width: 930px;
-	height: 160px;
->>>>>>> startup_feature
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -245,7 +230,6 @@ footer a {
 	width: 250px;
 	height: auto;
 }
-<<<<<<< HEAD
 #img_produit img {
 	width: 100px;
 	height: auto;
@@ -253,33 +237,6 @@ footer a {
 	margin-bottom: 30px;
 	margin-left: 50px;
 }
-=======
-#image_produits_globale {
-	display: flex;
-	flex-direction: column;
-}
-#img_produit {
-	width: 200px;
-}
-#img_produit img {
-	width: 100px;
-	height: auto;
-	margin-left: 80px;
-}
-#thunbmail_produit {
-	margin-left: 70px;
-}
-#thunbmail_produit img {
-	width: 40px;
-	height: auto;
-}
-#thunbmail_produit img:hover {
-	box-shadow: 3px 3px 13px #CECECE;
-	border-radius: 5px;
-	transition: all ease-in-out .5s;
-}
-
->>>>>>> startup_feature
 #button_click input {
 	width: 100px;
 	height: 30px;
@@ -287,12 +244,9 @@ footer a {
 	background-color: #CECECE;
 	border: 1px solid  #CECECE;
 	box-shadow: 5px 5px 10px 0px #ECEFF1;
-<<<<<<< HEAD
 	/*margin-top: 20px;*/
 	margin-left: 100px;
 
-=======
->>>>>>> startup_feature
 }
 #logoEtNomStart {
 	display: flex;
@@ -308,19 +262,8 @@ footer a {
 }
 #text_start p {
 	text-align: justify;
-<<<<<<< HEAD
 }
 
-=======
-	margin-bottom: 15px;
-}
-#text_start h3 {
-	font-size: 13px;
-	margin-top: 15px;
-	font-style: italic;
-	color: #008C9E;
-}
->>>>>>> startup_feature
 
 #ancre  .fa-circle {
 	color: #008C9E;
@@ -902,66 +845,3 @@ em:hover {
 	margin-left: -8px !important;
 }
 /*MODAL*/
-<<<<<<< HEAD
-=======
-
-
-
-/*MAGASIN*/
-
-#containerMagasin {
-	width: 100%;
-	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-bottom: 80px;
-	margin-top: 60px;
-}
-#containerMagasin script {
-	margin-top: 20px;
-	margin-right: 20px;
-}
-.magasin-inline {
-	display: flex;
-	flex-direction: column;
-}
-.input-ville {
-	height: 40px;
-	width: 200px;
-}
-.magasin-inline p {
-	margin-top: 30px;
-	margin-bottom: 10px;
-}
-.magasin-inline select {
-	width: 80px;
-	margin-top: 10px;
-}
-#searchMag {
-	height: 400px;
-	width: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-left: 20px;
-}
-.button-magasin {
-	margin: 0;
-	border-radius:0%;
-	padding: 10px;
-	width: 160px;
-	background-color: #19dcd5;
-	color: white;
-	margin-top: 30px;
-}
-
-
-
-
-
-
-/*MAGASIN*/
->>>>>>> startup_feature
